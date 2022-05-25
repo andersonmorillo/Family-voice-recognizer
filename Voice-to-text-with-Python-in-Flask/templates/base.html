@@ -1,5 +1,5 @@
 
-
+<html class="p-3 mb-2 bg-secondary text-white">
 {% extends "bootstrap/base.html" %}
 
 {% block title %}My Web Application{% endblock %}
@@ -11,7 +11,7 @@
 
     <div class="navbar navbar-inverse" role="navigation">
 
-        <div class="container">
+        <div class="container  ">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -22,12 +22,12 @@
                 </button>
                 <a class="navbar-brand" href="/">Proyecto </a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" >
                 <ul class="nav navbar-nav">
-                    <li><a href="/">inicio</a></li>
-                    <li><a href="https://forms.office.com/r/Q7s5Aha3Di" target="_blank">Formulario mayores de edad</a></li>
-                    <li><a href="https://forms.office.com/r/HD8f4LrfZ4" target="_blank">Formulario menores de edad</a></li>
-                    <li><a href="/documento_sad" target="_blank">Documento SAD</a></li>
+                    <li><a href="/" class="">inicio</a></li>
+                    <li><a href="https://forms.office.com/r/Q7s5Aha3Di" class="mb-0" target="_blank">Formulario mayores de edad</a></li>
+                    <li><a href="https://forms.office.com/r/HD8f4LrfZ4" class="mb-0" target="_blank">Formulario menores de edad</a></li>
+                    <li><a href="/documento_sad" class="mb-0" target="_blank">Documento SAD</a></li>
 
                 </ul>
             </div>
@@ -42,3 +42,4 @@
     </footer>
 {% block content %}
 {% endblock %}
+</html>
