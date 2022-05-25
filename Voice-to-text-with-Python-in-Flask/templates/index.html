@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<body>
+    <h1>Architecture for Voice Recognition in Family Members (AVRFM)</h1>
+    <br>
+    <h3>Step 1 - Ir a la barra de navegación y llenar el formulario </h3>
+    <br>
+    <h3>Step 2 - Grabar o subir directamente en el paso 4 audio en formato .wav </h3>
+    <br>
+    <div style="max-width: 28em;">
+		<p>Convert recorded audio to wav:</p>
+
+		<select id="encodingTypeSelect">
+		  <option value="wav">Waveform Audio (.wav)</option>
+		</select>
+		<div id="controls">
+			<button id="recordButton">Record</button>
+			<button id="stopButton" disabled>Stop</button>
+		</div>
+		<div id="formats"></div>
+		<pre>Log</pre>
+		<pre id="log"></pre>
+        <br>
+        <h3>Step 3 - Descargar el audio </h3>
+		
+		<ol id="recordingsList"></ol>
+	</div>
+
+    <div id="speechContainer">
+        <br>
+        <h3>Step 4 - subir el audio en formato .wav </h3>
+
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file"/>
+            <br>
+
+            <br>
+            <h3>Step 4 - Ejecutar el programa </h3>
+            <input type="submit" id="submitButton" value="Enviar"/>
+        </form>
+
+
+    </div>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="{{ url_for('static', filename='js/WebAudioRecorder.min.js') }}" ></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}" ></script>
+</body>
+
+{% endblock %}
